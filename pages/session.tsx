@@ -1,8 +1,8 @@
-export default function Home() {
+export default function Session() {
   return (
     <>
       <h1>Thoughtnaut</h1>
-      <p>Home.</p>
+      <p>Session.</p>
     </>
   )
 }
