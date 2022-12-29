@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Thoughtnaut-Workspace-1000av.us-east-1.xata.sh/db/session",
+  "codegen": {
+    "output": "utils/xata.ts"
+  }
+}
