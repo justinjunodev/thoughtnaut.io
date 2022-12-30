@@ -1,18 +1,19 @@
 import { GetServerSideProps } from 'next'
-import { XataClient, PromptsRecord } from '../utils/xata'
+import { XataClient, PromptsRecord } from '@/utils/xata'
+import Layout from '@/components/Layout'
 
 interface SessionProps {
   prompts: PromptsRecord[]
 }
 
-export default function Session({ prompts }: SessionProps) {
+const Session = ({ prompts }: SessionProps) => {
   console.log(prompts)
 
   return (
-    <>
+    <Layout>
       <h1>Thoughtnaut</h1>
       <p>Session.</p>
-    </>
+    </Layout>
   )
 }
 
@@ -34,3 +35,5 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   return { props: { prompts: [...daily, special[a], special[b]] } }
 }
+
+export default Session
