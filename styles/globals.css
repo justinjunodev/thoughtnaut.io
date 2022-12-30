@@ -1,7 +1,64 @@
 /*
-  Global CSS
+  Global Styles
 */
 
+/* Fonts */
+@font-face {
+  font-family: 'Recoleta';
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Recoleta-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Recoleta';
+  font-weight: 700;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Recoleta-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Quicksand-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Quicksand-Bold.woff2') format('woff2');
+}
+
+/* Variables */
+:root {
+  --ff-sans: 'Quicksand', sans-serif;
+  --ff-serif: 'Recoleta', serif;
+  --fw-normal: 500;
+  --fw-bold: 700;
+}
+
+/* Styles */
 body {
-  font-family: sans-serif;
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-bold);
 }
