@@ -26,5 +26,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
   let b = Math.floor(Math.random() * special?.length)
   b == a ? (b = Math.floor(Math.random() * special?.length)) : b
 
+  if (!prompts) {
+    return {
+      notFound: true,
+    }
+  }
+
   return { props: { prompts: [...daily, special[a], special[b]] } }
 }
