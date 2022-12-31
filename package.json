@@ -1,5 +1,6 @@
 {
-  "name": "thoughtnaut.com",
+  "name": "thoughtnaut.io",
+  "author": "Justin Juno <hello@justinjuno.dev>",
   "version": "0.1.0",
   "private": true,
   "scripts": {
