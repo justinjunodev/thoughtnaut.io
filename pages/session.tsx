@@ -11,7 +11,6 @@ const Session = ({ prompts }: SessionProps) => {
 
   return (
     <Layout>
-      <h1>Thoughtnaut</h1>
       <p>Session.</p>
     </Layout>
   )

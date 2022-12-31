@@ -45,12 +45,25 @@
   --ff-serif: 'Recoleta', serif;
   --fw-normal: 500;
   --fw-bold: 700;
+  --fs-sm: clamp(0.8rem, -0.09vw + 0.82rem, 0.75rem);
+  --fs-base: clamp(1rem, 0vw + 1rem, 1rem);
+  --fs-md: clamp(1.25rem, 0.15vw + 1.21rem, 1.33rem);
+  --fs-lg: clamp(1.56rem, 0.39vw + 1.47rem, 1.78rem);
+  --fs-xl: clamp(1.95rem, 0.76vw + 1.76rem, 2.37rem);
+  --fs-xxl: clamp(2.44rem, 1.3vw + 2.12rem, 3.16rem);
+  --gap-sm: 0.8rem;
+  --gap-base: 1rem;
+  --gap-md: 1.25rem;
+  --gap-lg: 1.56rem;
+  --gap-xl: 1.95rem;
+  --gap-xxl: 2.44rem;
 }
 
 /* Styles */
 body {
   font-family: var(--ff-sans);
   font-weight: var(--fw-normal);
+  font-size: var(--fs-base);
 }
 
 h1,
@@ -61,4 +74,9 @@ h5,
 h6 {
   font-family: var(--ff-serif);
   font-weight: var(--fw-bold);
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

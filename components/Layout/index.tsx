@@ -1,12 +1,19 @@
-import React from 'react'
 import styles from './layout.module.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 interface LayoutProps {
   children: React.ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  return <div className={styles.container}>{children}</div>
+  return (
+    <div className={styles.container}>
+      <Header />
+      <main className={styles.page}>{children}</main>
+      <Footer />
+    </div>
+  )
 }
 
 export default Layout
