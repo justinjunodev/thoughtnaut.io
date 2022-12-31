@@ -7,24 +7,28 @@
   --ff-serif: 'Recoleta', serif;
   --fw-normal: 500;
   --fw-bold: 700;
-  --fs-sm: clamp(0.8rem, -0.09vw + 0.82rem, 0.75rem);
-  --fs-base: clamp(1rem, 0vw + 1rem, 1rem);
-  --fs-md: clamp(1.25rem, 0.15vw + 1.21rem, 1.33rem);
-  --fs-lg: clamp(1.56rem, 0.39vw + 1.47rem, 1.78rem);
-  --fs-xl: clamp(1.95rem, 0.76vw + 1.76rem, 2.37rem);
-  --fs-xxl: clamp(2.44rem, 1.3vw + 2.12rem, 3.16rem);
-  --gap-sm: 0.8rem;
-  --gap-base: 1rem;
-  --gap-md: 1.25rem;
-  --gap-lg: 1.56rem;
-  --gap-xl: 1.95rem;
-  --gap-xxl: 2.44rem;
+  --fs-sm: clamp(0.66rem, 0.71vw + 0.46rem, 0.8rem);
+  --fs-base: clamp(0.88rem, 0.94vw + 0.61rem, 1.06rem);
+  --fs-md: clamp(1.17rem, 1.26vw + 0.81rem, 1.42rem);
+  --fs-lg: clamp(1.55rem, 1.68vw + 1.08rem, 1.89rem);
+  --fs-xl: clamp(2.07rem, 2.23vw + 1.44rem, 2.52rem);
+  --fs-xxl: clamp(2.76rem, 2.98vw + 1.92rem, 3.35rem);
+  --lh-sm: 1.2;
+  --lh-base: 1.5;
+  --lg-md: 1.65;
+  --gap-sm: 0.66rem;
+  --gap-base: 0.88rem;
+  --gap-md: 1.17rem;
+  --gap-lg: 1.55rem;
+  --gap-xl: 2.07rem;
+  --gap-xxl: 2.76rem;
 }
 
 body {
   font-family: var(--ff-sans);
   font-weight: var(--fw-normal);
   font-size: var(--fs-base);
+  line-height: var(--lh-base);
 }
 
 h1,
