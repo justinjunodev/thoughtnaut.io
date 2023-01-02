@@ -12,7 +12,9 @@ const Welcome = () => {
 
   return (
     <>
-      <h2 className={styles.heading}>Explore your mind.</h2>
+      <h2 className={styles.heading}>
+        <Balancer>Explore your mind.</Balancer>
+      </h2>
       <p className={styles.copy}>
         <Balancer ratio={0.4}>
           Navigate your thoughts with Thoughtnaut. A journaling companion that

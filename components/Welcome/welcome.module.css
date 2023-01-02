@@ -1,12 +1,13 @@
 .heading {
   font-size: var(--fs-xxl);
-  margin-bottom: var(--gap-sm);
+  margin-bottom: var(--gap-base);
+  line-height: var(--lh-sm);
 }
 
 .copy {
   font-size: var(--fs-md);
   line-height: var(--lh-md);
-  margin-bottom: var(--gap-xl);
+  margin-bottom: var(--gap-xxl);
 }
 
 .button {
@@ -22,6 +23,7 @@
 
 .subcopy {
   line-height: var(--lh-sm);
+  margin-bottom: var(--gap-sm);
 }
 
 .subcopyLink {

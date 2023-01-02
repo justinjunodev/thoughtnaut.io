@@ -7,21 +7,23 @@
   --ff-serif: 'Recoleta', serif;
   --fw-normal: 500;
   --fw-bold: 700;
-  --fs-sm: clamp(0.66rem, 0.71vw + 0.46rem, 0.8rem);
-  --fs-base: clamp(0.88rem, 0.94vw + 0.61rem, 1.06rem);
-  --fs-md: clamp(1.17rem, 1.26vw + 0.81rem, 1.42rem);
-  --fs-lg: clamp(1.55rem, 1.68vw + 1.08rem, 1.89rem);
-  --fs-xl: clamp(2.07rem, 2.23vw + 1.44rem, 2.52rem);
-  --fs-xxl: clamp(2.76rem, 2.98vw + 1.92rem, 3.35rem);
+  --fs-sm: clamp(0.8rem, 0.19vw + 0.75rem, 0.84rem);
+  --fs-base: clamp(1rem, 0.54vw + 0.86rem, 1.13rem);
+  --fs-md: clamp(1.25rem, 1.09vw + 0.98rem, 1.5rem);
+  --fs-lg: clamp(1.56rem, 1.9vw + 1.09rem, 2rem);
+  --fs-xl: clamp(1.95rem, 3.09vw + 1.18rem, 2.66rem);
+  --fs-xxl: clamp(2.44rem, 4.83vw + 1.23rem, 3.55rem);
+  --fs-xxxl: clamp(3.05rem, 7.32vw + 1.22rem, 4.73rem);
   --lh-sm: 1.2;
   --lh-base: 1.5;
   --lg-md: 1.65;
-  --gap-sm: 0.66rem;
-  --gap-base: 0.88rem;
-  --gap-md: 1.17rem;
-  --gap-lg: 1.55rem;
-  --gap-xl: 2.07rem;
-  --gap-xxl: 2.76rem;
+  --gap-sm: 0.8rem;
+  --gap-base: 1rem;
+  --gap-md: 1.25rem;
+  --gap-lg: 1.56rem;
+  --gap-xl: 1.195rem;
+  --gap-xxl: 2.44rem;
+  --gap-xxxl: 3.405rem;
 }
 
 body {
