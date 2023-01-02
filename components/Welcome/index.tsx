@@ -16,7 +16,7 @@ const Welcome = () => {
         <Balancer>Explore your mind.</Balancer>
       </h2>
       <p className={styles.copy}>
-        <Balancer ratio={0.4}>
+        <Balancer ratio={0.2}>
           Navigate your thoughts with Thoughtnaut. A journaling companion that
           will explore your mind and help you find clarity. Start a session now,
           it&apos;s free. No account required.
