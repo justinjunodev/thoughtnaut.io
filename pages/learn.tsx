@@ -1,9 +1,10 @@
 import Layout from '@/components/Layout'
+import FAQ from '@/components/FAQ'
 
 const Learn = () => {
   return (
     <Layout>
-      <p>Learn.</p>
+      <FAQ />
     </Layout>
   )
 }

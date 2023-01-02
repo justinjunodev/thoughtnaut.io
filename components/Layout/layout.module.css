@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-gap: var(--gap-xxl);
+  grid-gap: var(--gap-xxxl);
   max-height: 1080px;
   height: 100vh;
   max-width: 768px;

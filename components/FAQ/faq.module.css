@@ -1,0 +1,28 @@
+.heading {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--gap-sm);
+  line-height: var(--lh-sm);
+}
+
+.subheading {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
+
+.copy {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
+
+.copyLink {
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+}
+
+.divider {
+  margin: var(--gap-xxl) auto var(--gap-xxl);
+  border-bottom: 3px solid black;
+  width: 8rem;
+}
