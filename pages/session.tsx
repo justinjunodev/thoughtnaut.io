@@ -1,17 +1,16 @@
 import { GetServerSideProps } from 'next'
 import { XataClient, PromptsRecord } from '@/utils/xata'
 import Layout from '@/components/Layout'
+import ActiveSession from '@/components/ActiveSession'
 
 interface SessionProps {
   prompts: PromptsRecord[]
 }
 
 const Session = ({ prompts }: SessionProps) => {
-  console.log(prompts)
-
   return (
     <Layout>
-      <p>Session.</p>
+      <ActiveSession prompts={prompts} />
     </Layout>
   )
 }
