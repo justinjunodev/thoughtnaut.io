@@ -2,11 +2,16 @@ import styles from './welcome.module.css'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Balancer from 'react-wrap-balancer'
+import { trackGoal } from 'fathom-client'
 
 const Welcome = () => {
   const router = useRouter()
 
   function handleClick() {
+    if (process.env.NODE_ENV === 'production') {
+      trackGoal(process.env.NEXT_PUBLIC_FATHOM_SESSION_STARTED as string, 0)
+    }
+
     router.push('/session')
   }
 
