@@ -1,0 +1,44 @@
+.heading {
+  font-size: var(--fs-md);
+  margin-bottom: var(--gap-base);
+  line-height: var(--lh-sm);
+}
+
+.copy {
+  font-size: var(--fs-md);
+  line-height: var(--lh-md);
+  margin-bottom: var(--gap-xxl);
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--gap-xxl);
+  padding: var(--gap-sm) var(--gap-xxl);
+  margin-bottom: var(--gap-base);
+  font-family: var(--ff-serif);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+}
+
+.buttonRound {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--gap-xxl);
+  padding: var(--gap-sm);
+  margin: 0 3px var(--gap-base);
+  font-family: var(--ff-serif);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+}
+
+.subcopy {
+  line-height: var(--lh-sm);
+}
+
+.subcopyLink {
+  font-weight: var(--fw-bold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+}
