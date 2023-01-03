@@ -14,7 +14,8 @@ Router.events.on('routeChangeComplete', (as, routeProps) => {
 const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     Fathom.load(process.env.NEXT_PUBLIC_FATHOM_SITE_ID as string, {
-      includedDomains: ['thoughtnaut.io'],
+      includedDomains: ['thoughtnaut.io', 'www.thoughtnaut.io'],
+      url: 'https://twentythree-ecstatic.thoughtnaut.io/script.js',
     })
   }, [])
 
