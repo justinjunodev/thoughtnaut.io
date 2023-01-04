@@ -125,6 +125,15 @@ body {
   padding: var(--gap-sm);
 }
 
+.main__divider {
+  border: none;
+  margin: var(--gap-lg) auto;
+  width: 5rem;
+  height: 0.25rem;
+  background-color: black;
+  border-radius: 9999px;
+}
+
 .footer {
   text-align: center;
   align-self: flex-start;
