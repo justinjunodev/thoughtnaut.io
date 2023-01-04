@@ -21,7 +21,7 @@
   --gap-base: 1rem;
   --gap-md: 1.25rem;
   --gap-lg: 1.56rem;
-  --gap-xl: 1.195rem;
+  --gap-xl: 1.95rem;
   --gap-xxl: 2.44rem;
   --gap-xxxl: 3.405rem;
 }
@@ -33,17 +33,105 @@ body {
   line-height: var(--lh-base);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.container {
+  display: grid;
+  grid-template-rows: 4.73rem 1fr 3.405rem;
+  grid-gap: var(--gap-xxxl);
+  height: min(100vh, 1080px);
+  width: min(768px, 100vw - var(--gap-xxl));
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  align-self: flex-end;
+}
+
+.header__wordmark {
   font-family: var(--ff-serif);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+}
+
+.header__wordmark > a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.main {
+  text-align: center;
+  align-self: center;
+}
+
+.main > *:last-child {
+  margin-bottom: 0;
+}
+
+.main__heading {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-sm);
+  margin-bottom: var(--gap-sm);
+}
+
+.main__heading-lead {
+  font-size: var(--fs-xxl);
+  margin-bottom: var(--gap-base);
+}
+
+.main__copy {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  margin-bottom: var(--gap-lg);
+}
+
+.main__copy-lead {
+  font-size: var(--fs-md);
+  line-height: var(--lh-md);
+  margin-bottom: var(--gap-xl);
+}
+
+.main__copy-sub {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  margin-bottom: var(--gap-base);
+}
+
+.main__link {
+  text-decoration: underline;
+  text-decoration-thickness: 0.15rem;
+  text-decoration-color: black;
+  color: black;
+  text-underline-offset: 0.15rem;
+  font-size: inherit;
+  cursor: pointer;
   font-weight: var(--fw-bold);
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.main__button {
+  cursor: pointer;
+  padding: var(--gap-sm) var(--gap-xl);
+  border: none;
+  border-radius: 9999px;
+  font-family: var(--ff-serif);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  margin: 0 0.25rem var(--gap-sm);
+}
+
+.main__button-round {
+  aspect-ratio: 1/1;
+  padding: var(--gap-sm);
+}
+
+.footer {
+  text-align: center;
+  align-self: flex-start;
+  height: 100%;
+}
+
+.footer__copyright {
+  display: block;
+  font-size: var(--fs-sm);
 }

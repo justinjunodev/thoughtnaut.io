@@ -1,4 +1,3 @@
-import styles from './layout.module.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -8,9 +7,9 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Header />
-      <main>{children}</main>
+      <main className="main">{children}</main>
       <Footer />
     </div>
   )

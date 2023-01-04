@@ -1,10 +1,10 @@
-import '@/styles/reset.css'
-import '@/styles/fonts.css'
-import '@/styles/globals.css'
 import { useEffect } from 'react'
 import type { AppProps } from 'next/app'
 import Router from 'next/router'
 import * as Fathom from 'fathom-client'
+import '@/styles/reset.css'
+import '@/styles/fonts.css'
+import '@/styles/globals.css'
 
 Router.events.on('routeChangeComplete', (as, routeProps) => {
   if (!routeProps.shallow) {
