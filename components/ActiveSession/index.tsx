@@ -29,7 +29,7 @@ const ActiveSession = ({ prompts }: ActiveSessionProps) => {
       <p className={styles.copy}>
         <Balancer ratio={0.75}>{prompts[currentPrompt].prompt}</Balancer>
       </p>
-      {currentPrompt === 4 ? (
+      {currentPrompt >= 4 ? (
         <button
           type="button"
           onClick={() => handleClick()}
