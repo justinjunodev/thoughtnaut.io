@@ -7,6 +7,7 @@ import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
 import Balancer from 'react-wrap-balancer'
 import { XataClient, PromptsRecord } from '@/utils/xata'
 import Layout from '@/components/Layout'
+import Button from '@/components/Button'
 
 interface SessionProps {
   prompts: PromptsRecord[]
@@ -23,6 +24,7 @@ const Session = ({ prompts }: SessionProps) => {
 
     router.push('/success')
   }
+
   return (
     <Layout>
       <h2 className="main__heading">Prompt {currentPrompt + 1} of 5</h2>
@@ -30,29 +32,22 @@ const Session = ({ prompts }: SessionProps) => {
         <Balancer>{prompts[currentPrompt].prompt}</Balancer>
       </p>
       {currentPrompt >= 4 ? (
-        <button
-          type="button"
-          onClick={() => handleClick()}
-          className="main__button"
-        >
-          Complete Session
-        </button>
+        <Button handleClick={() => handleClick()}>Complete Session</Button>
       ) : (
         <>
-          <button
-            type="button"
-            onClick={() => setCurrentPrompt(currentPrompt - 1)}
-            className="main__button main__button-round"
+          <Button
+            handleClick={() => setCurrentPrompt(currentPrompt - 1)}
+            isRound={true}
+            isDisabled={currentPrompt === 0}
           >
             <GrFormPrevious size="2.2rem" />
-          </button>
-          <button
-            type="button"
-            onClick={() => setCurrentPrompt(currentPrompt + 1)}
-            className="main__button main__button-round"
+          </Button>
+          <Button
+            handleClick={() => setCurrentPrompt(currentPrompt + 1)}
+            isRound={true}
           >
             <GrFormNext size="2.2rem" />
-          </button>
+          </Button>
           <p className="main__copy">
             <Link href="/" className="main__link">
               Leave Session

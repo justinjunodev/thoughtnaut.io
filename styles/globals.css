@@ -157,8 +157,10 @@ body {
   background-color: var(--color-lighter);
 }
 
-.main__button:hover {
-  background-color: var(--color-lighter);
+.main__button:disabled {
+  cursor: not-allowed;
+  background-color: var(--color-light);
+  opacity: 0.25;
 }
 
 .main__button-round {

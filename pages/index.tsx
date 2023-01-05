@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Balancer from 'react-wrap-balancer'
 import { trackGoal } from 'fathom-client'
 import Layout from '@/components/Layout'
+import Button from '@/components/Button'
 
 const Home = () => {
   const router = useRouter()
@@ -27,13 +28,7 @@ const Home = () => {
           it&apos;s free. No account required.
         </Balancer>
       </p>
-      <button
-        type="button"
-        onClick={() => handleClick()}
-        className="main__button"
-      >
-        Start Session
-      </button>
+      <Button handleClick={() => handleClick()}>Start Session</Button>
       <p className="main__copy">
         First time?{' '}
         <Link href="/learn" className="main__link">
