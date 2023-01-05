@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Balancer from 'react-wrap-balancer'
@@ -6,14 +7,19 @@ import Layout from '@/components/Layout'
 import Button from '@/components/Button'
 
 const Home = () => {
+  const [isClicked, setIsClicked] = useState(false)
   const router = useRouter()
 
   function handleClick() {
+    setIsClicked(true)
+
     if (process.env.NODE_ENV === 'production') {
       trackGoal(process.env.NEXT_PUBLIC_FATHOM_SESSION_STARTED as string, 0)
     }
 
-    router.push('/session')
+    setTimeout(() => {
+      router.push('/session')
+    }, 250)
   }
 
   return (
@@ -28,7 +34,9 @@ const Home = () => {
           it&apos;s free. No account required.
         </Balancer>
       </p>
-      <Button handleClick={() => handleClick()}>Start Session</Button>
+      <Button handleClick={() => handleClick()}>
+        {isClicked ? 'Loading...' : 'Start Session'}
+      </Button>
       <p className="main__copy">
         First time?{' '}
         <Link href="/learn" className="main__link">
