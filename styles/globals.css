@@ -24,6 +24,11 @@
   --gap-xl: 1.95rem;
   --gap-xxl: 2.44rem;
   --gap-xxxl: 3.405rem;
+  --color-darker: #1c1917;
+  --color-dark: #292524;
+  --color-light: #d6d3d1;
+  --color-lighter: #f5f5f4;
+  --color-primary: #dfb6c4;
 }
 
 body {
@@ -31,6 +36,17 @@ body {
   font-weight: var(--fw-normal);
   font-size: var(--fs-base);
   line-height: var(--lh-base);
+  color: var(--color-light);
+  background-color: var(--color-darker);
+  background-image: radial-gradient(
+    at center top,
+    var(--color-dark) 0%,
+    var(--color-dark) 33%,
+    var(--color-darker) 66%,
+    var(--color-darker) 100%
+  );
+  background-repeat: none;
+  background-attachment: fixed;
 }
 
 .container {
@@ -55,8 +71,12 @@ body {
 
 .header__wordmark > a {
   text-decoration: none;
-  color: black;
+  color: var(--color-lighter);
   cursor: pointer;
+}
+
+.header__wordmark > a:hover {
+  color: var(--color-lighter);
 }
 
 .main {
@@ -73,6 +93,7 @@ body {
   font-weight: var(--fw-bold);
   line-height: var(--lh-sm);
   margin-bottom: var(--gap-sm);
+  color: var(--color-lighter);
 }
 
 .main__heading-lead {
@@ -101,12 +122,17 @@ body {
 .main__link {
   text-decoration: underline;
   text-decoration-thickness: 0.15rem;
-  text-decoration-color: black;
-  color: black;
+  text-decoration-color: var(--color-primary);
+  color: var(--color-lighter);
   text-underline-offset: 0.15rem;
   font-size: inherit;
   cursor: pointer;
   font-weight: var(--fw-bold);
+  transition: text-decoration-color 160ms ease-in-out;
+}
+
+.main__link:hover {
+  text-decoration-color: var(--color-lighter);
 }
 
 .main__button {
@@ -118,6 +144,21 @@ body {
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
   margin: 0 0.25rem var(--gap-sm);
+  color: var(--color-dark);
+  background-color: var(--color-primary);
+  transition: background-color 160ms ease-in-out;
+}
+
+.main__button > svg > * {
+  stroke: inherit;
+}
+
+.main__button:hover {
+  background-color: var(--color-lighter);
+}
+
+.main__button:hover {
+  background-color: var(--color-lighter);
 }
 
 .main__button-round {
@@ -130,7 +171,7 @@ body {
   margin: var(--gap-lg) auto;
   width: 5rem;
   height: 0.25rem;
-  background-color: black;
+  background-color: var(--color-primary);
   border-radius: 9999px;
 }
 
