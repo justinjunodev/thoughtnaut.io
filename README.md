@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Thoughtnaut.io
 
-## Getting Started
+**Navigate your thoughts with Thoughtnaut. A journaling companion that will explore your mind and help you find clarity. This application is also part of the [Xata Challenge](https://xata.io/challenge).**
 
-First, run the development server:
+### 🚀 Getting Started.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Clone and/ or download the project locally.
+1. Navigate to the projects root directory and install its dependencies: `npm i`
+1. You’re ready to code! Start your development environment `npm run dev`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+_Note: This project is still in beta and a sample dataset has not been created. To render the `session` page locally, you can create an array of prompt objects and use them instead of the data from the `getServerSideProps`. Example: `const prompts = Array.from({ length: 5 } , () => ({id: 0, prompt: 'How do you feel today?'}))._
+`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 🔗 Documentation and Resources.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **[Next](https://nextjs.org/)** - React framework for production.
+- **[TypeScript](https://www.typescriptlang.org/)** - Strongly-typed programming language that builds on JavaScript.
+- **[Xata](https://xata.io/)** - A scalable and serverless database for modern applications.
+- **[Framer Motion](https://www.framer.com/motion/)** - A production-ready motion library for React.
+- **[ESLint](https://eslint.org/)** - Code analysis tool monitoring code and maintaining quality.
+- **[Prettier](https://prettier.io/)** - Opinionated code formatter.
+- **[Fathom](https://usefathom.com/ref/FBBCWG)** - Privacy first analytics and event tracking.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+### 💼 License.
 
-To learn more about Next.js, take a look at the following resources:
+This application is licensed under an MIT license.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ⭐️ Contributions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thanks for your interest in this project! Pull Requests are welcome for any level of improvement, from small typos to pesky bugs, let’s make this project better. More information can be found in the `CONTRIBUTING.md` file.
