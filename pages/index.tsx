@@ -20,7 +20,7 @@ const Home = () => {
 
     setTimeout(() => {
       router.push('/session')
-    }, 250)
+    }, 150)
   }
 
   return (
