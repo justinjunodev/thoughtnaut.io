@@ -9,6 +9,7 @@ import Balancer from 'react-wrap-balancer'
 import { XataClient, PromptsRecord } from '@/utils/xata'
 import Layout from '@/components/Layout'
 import Button from '@/components/Button'
+import SEO from '@/components/SEO'
 
 interface SessionProps {
   prompts: PromptsRecord[]
@@ -28,6 +29,7 @@ const Session = ({ prompts }: SessionProps) => {
 
   return (
     <Layout>
+      <SEO title="Session" />
       <h2 className="main__heading">Prompt {currentPrompt + 1} of 5</h2>
       {prompts?.map((p, index) => (
         <motion.div

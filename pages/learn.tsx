@@ -1,9 +1,11 @@
 import Balancer from 'react-wrap-balancer'
 import Layout from '@/components/Layout'
+import SEO from '@/components/SEO'
 
 const Learn = () => {
   return (
     <Layout>
+      <SEO title="Learn" />
       <h2 className="main__heading">
         <Balancer>How do sessions work?</Balancer>
       </h2>

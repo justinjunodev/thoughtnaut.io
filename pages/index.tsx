@@ -5,6 +5,7 @@ import Balancer from 'react-wrap-balancer'
 import { trackGoal } from 'fathom-client'
 import Layout from '@/components/Layout'
 import Button from '@/components/Button'
+import SEO from '@/components/SEO'
 
 const Home = () => {
   const [isClicked, setIsClicked] = useState(false)
@@ -24,6 +25,7 @@ const Home = () => {
 
   return (
     <Layout>
+      <SEO title="Home" />
       <h2 className="main__heading main__heading-lead">
         <Balancer>Explore your mind.</Balancer>
       </h2>

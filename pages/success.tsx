@@ -1,9 +1,11 @@
 import Balancer from 'react-wrap-balancer'
 import Layout from '@/components/Layout'
+import SEO from '@/components/SEO'
 
 const Success = () => {
   return (
     <Layout>
+      <SEO title="Success" />
       <h2 className="main__heading main__heading-lead">
         <Balancer>Session complete.</Balancer>
       </h2>

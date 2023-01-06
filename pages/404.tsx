@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import Balancer from 'react-wrap-balancer'
 import Layout from '@/components/Layout'
+import SEO from '@/components/SEO'
 
 const PageNotFound = () => {
   return (
     <Layout>
+      <SEO title="404 - Error" />
       <h2 className="main__heading">
         <Balancer>Well that didn&apos;t work.</Balancer>
       </h2>
