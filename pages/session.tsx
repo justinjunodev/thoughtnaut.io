@@ -39,7 +39,7 @@ const Session = ({ prompts }: SessionProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: index === currentPrompt ? 1 : 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
           style={{ display: index === currentPrompt ? 'block' : 'none' }}
         >
           <p className="main__copy-lead">

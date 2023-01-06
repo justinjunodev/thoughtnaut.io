@@ -23,7 +23,7 @@ const Home = () => {
     // Add timeout to allow user to see the loading state.
     setTimeout(() => {
       router.push('/session')
-    }, 150)
+    }, 75)
   }
 
   return (
@@ -40,7 +40,7 @@ const Home = () => {
         </Balancer>
       </p>
       <Button handleClick={() => handleClick()}>
-        {isClicked ? 'Loading...' : 'Start Session'}
+        {isClicked ? 'Starting...' : 'Start Session'}
       </Button>
       <p className="main__copy">
         First time?{' '}

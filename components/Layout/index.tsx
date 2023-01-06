@@ -12,9 +12,9 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
       <motion.main
         className="main"
-        initial={{ y: 24, opacity: 0 }}
+        initial={{ y: 18, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.35, ease: 'easeOut' }}
+        transition={{ duration: 0.2, type: 'easeInOut' }}
         viewport={{ once: true }}
       >
         {children}
