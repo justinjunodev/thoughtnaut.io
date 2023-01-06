@@ -1,4 +1,4 @@
-# Thoughtnaut.io
+# Thoughtnaut.io – BETA
 
 **Navigate your thoughts with Thoughtnaut. A journaling companion that will explore your mind and help you find clarity. This application is also part of the [Xata Challenge](https://xata.io/challenge).**
 
@@ -8,7 +8,8 @@
 1. Navigate to the projects root directory and install its dependencies: `npm i`
 1. You’re ready to code! Start your development environment `npm run dev`.
 
-_Note: This project is still in beta and a sample dataset has not been created. To render the `session` page locally, you can create an array of prompt objects and use them instead of the data from the `getServerSideProps`. Example: `const prompts = Array.from({ length: 5 } , () => ({id: 0, prompt: 'How do you feel today?'}))._
+#### Note: This project is still in beta and a sample dataset has not been created. 
+To render the `session` page locally, you can create an array of prompt objects and use them instead of the data from the `getServerSideProps`. Example: `const prompts = Array.from({ length: 5 } , () => ({id: 0, prompt: 'How do you feel today?'})).
 `
 
 ---
@@ -27,7 +28,9 @@ _Note: This project is still in beta and a sample dataset has not been created. 
 
 ### 💼 License.
 
-This application is licensed under an MIT license.
+This project is licensed under an MIT license.
+
+---
 
 ### ⭐️ Contributions.
 
