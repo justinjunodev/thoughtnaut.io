@@ -19,11 +19,13 @@ const Session = ({ prompts }: SessionProps) => {
   const [currentPrompt, setCurrentPrompt] = useState(0)
   const router = useRouter()
 
+  // Track that the session has ended via Fathom.
   function handleClick() {
     if (process.env.NODE_ENV === 'production') {
       trackGoal(process.env.NEXT_PUBLIC_FATHOM_SESSION_ENDED as string, 0)
     }
 
+    // Route user to success page.
     router.push('/success')
   }
 
@@ -74,15 +76,18 @@ const Session = ({ prompts }: SessionProps) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
+  // Get all prompts from Xata and split into daily/ special groups.
   const xata = new XataClient({ apiKey: process.env.XATA_API_KEY })
   const prompts = await xata.db.prompts.getAll()
   const daily = prompts?.filter((prompt) => prompt.is_daily)
   const special = prompts?.filter((prompt) => !prompt.is_daily)
 
+  // Randomly select two unique prompts from the special group.
   const a = Math.floor(Math.random() * special?.length)
   let b = Math.floor(Math.random() * special?.length)
   b == a ? (b = Math.floor(Math.random() * special?.length)) : b
 
+  // If error, return 404.
   if (!prompts) {
     return {
       notFound: true,

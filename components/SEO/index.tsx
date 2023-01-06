@@ -5,6 +5,7 @@ interface SEOProps {
 }
 
 const SEO = ({ title }: SEOProps) => {
+  // Create reference object for meta data.
   const meta = {
     title: `${title} | Thoughtnaut | Explore your mind.`,
     description:
