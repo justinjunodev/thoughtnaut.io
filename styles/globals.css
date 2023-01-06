@@ -49,6 +49,18 @@ body {
   background-attachment: fixed;
 }
 
+*::selection {
+  color: var(--color-dark);
+  background-color: var(--color-primary);
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.075rem var(--color-light);
+  border-radius: 0.15rem;
+  padding: 0.075rem 0.15rem;
+}
+
 .container {
   display: grid;
   grid-template-rows: 4.73rem 1fr 3.405rem;
