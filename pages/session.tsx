@@ -3,6 +3,7 @@ import { GetServerSideProps } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { trackGoal } from 'fathom-client'
+import { motion } from 'framer-motion'
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
 import Balancer from 'react-wrap-balancer'
 import { XataClient, PromptsRecord } from '@/utils/xata'
@@ -28,9 +29,20 @@ const Session = ({ prompts }: SessionProps) => {
   return (
     <Layout>
       <h2 className="main__heading">Prompt {currentPrompt + 1} of 5</h2>
-      <p className="main__copy-lead">
-        <Balancer>{prompts[currentPrompt].prompt}</Balancer>
-      </p>
+      {prompts?.map((p, index) => (
+        <motion.div
+          key={p.id}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: index === currentPrompt ? 1 : 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
+          style={{ display: index === currentPrompt ? 'block' : 'none' }}
+        >
+          <p className="main__copy-lead">
+            <Balancer>{p.prompt}</Balancer>
+          </p>
+        </motion.div>
+      ))}
       {currentPrompt >= 4 ? (
         <Button handleClick={() => handleClick()}>Complete Session</Button>
       ) : (
