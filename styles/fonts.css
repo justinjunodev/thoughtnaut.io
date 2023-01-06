@@ -1,0 +1,39 @@
+/* 
+    Font Imports 
+*/
+
+@font-face {
+  font-family: 'Recoleta';
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Recoleta-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Recoleta';
+  font-weight: 700;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Recoleta-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-weight: 500;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Quicksand-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-display: block;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Quicksand-Bold.woff2') format('woff2');
+}
