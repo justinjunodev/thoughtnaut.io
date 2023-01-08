@@ -13,9 +13,8 @@ const Layout = ({ children }: LayoutProps) => {
       <motion.main
         className="main"
         initial={{ y: 18, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.2, type: 'easeInOut' }}
-        viewport={{ once: true }}
       >
         {children}
       </motion.main>
