@@ -25,11 +25,7 @@ const SEO = ({ title }: SEOProps) => {
         content="https://www.thoughtnaut.io"
         key="og:url"
       />
-      <meta
-        property="description"
-        content={meta?.description}
-        key="description"
-      />
+      <meta name="description" content={meta?.description} key="description" />
       <meta
         property="og:description"
         content={meta?.description}
@@ -37,7 +33,7 @@ const SEO = ({ title }: SEOProps) => {
       />
       <meta property="og:type" content="website" />
       <meta
-        property="twitter:card"
+        name="twitter:card"
         content="summary_large_image"
         key="twitter:card"
       />
@@ -51,17 +47,13 @@ const SEO = ({ title }: SEOProps) => {
         content="https://www.thoughtnaut.io"
         key="twitter:url"
       />
+      <meta name="twitter:title" content={meta?.title} key="twitter:title" />
       <meta
-        property="twitter:title"
-        content={meta?.title}
-        key="twitter:title"
-      />
-      <meta
-        property="twitter:description"
+        name="twitter:description"
         content={meta?.description}
         key="twitter:description"
       />
-      <meta property="twitter:image" content={meta?.card} key="twitter:image" />
+      <meta name="twitter:image" content={meta?.card} key="twitter:image" />
     </Head>
   )
 }
