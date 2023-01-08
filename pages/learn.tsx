@@ -13,8 +13,8 @@ const Learn = () => {
         <Balancer ratio={0.75}>
           All journaling sessions contain five writing prompts. Starting with
           three repeating daily prompts to set a foundation for your session.
-          Followed by two unique prompts that&apos;ll go deeper, explore your
-          mind, and differ with each session.
+          Followed by two unique prompts that&apos;ll go much deeper and differ
+          with each session.
         </Balancer>
       </p>
       <hr className="main__divider" />
