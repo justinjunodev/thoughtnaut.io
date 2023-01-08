@@ -13,6 +13,7 @@ const Button = ({
   handleClick,
   isDisabled = false,
   isRound = false,
+  ...props
 }: ButtonProps) => {
   return (
     <motion.button
@@ -22,6 +23,7 @@ const Button = ({
       onClick={handleClick}
       whileHover={{ scale: !isDisabled ? 1.035 : 1 }}
       whileTap={{ scale: !isDisabled ? 0.985 : 1 }}
+      {...props}
     >
       {children}
     </motion.button>

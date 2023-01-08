@@ -55,12 +55,18 @@ const Session = ({ prompts }: SessionProps) => {
             handleClick={() => setCurrentPrompt(currentPrompt - 1)}
             isRound={true}
             isDisabled={currentPrompt === 0}
+            aria-label={
+              currentPrompt === 0
+                ? 'Previous writing prompt does not exist'
+                : 'View previous writing prompt'
+            }
           >
             <GrFormPrevious size="2.2rem" />
           </Button>
           <Button
             handleClick={() => setCurrentPrompt(currentPrompt + 1)}
             isRound={true}
+            aria-label="View next writing prompt"
           >
             <GrFormNext size="2.2rem" />
           </Button>
