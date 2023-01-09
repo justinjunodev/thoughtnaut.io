@@ -71,8 +71,8 @@ const Session = ({ prompts }: SessionProps) => {
             <GrFormNext size="2.2rem" />
           </Button>
           <p className="main__copy">
-            <Link href="/" className="main__link">
-              Leave Session
+            <Link href="/learn" className="main__link">
+              How do sessions work?
             </Link>
           </p>
         </>
