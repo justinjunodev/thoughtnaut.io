@@ -8,9 +8,7 @@
 1. Navigate to the projects root directory and install its dependencies: `npm i`
 1. You’re ready to code! Start your development environment `npm run dev`.
 
-#### No `Xata API Key`? No problem.
-
-For contributors without access to the Xata backend, a sample set of writing prompts will be rendered when running locally.
+_Note: For contributors without access to the Xata backend, a sample set of writing prompts will be rendered when running locally._
 
 ---
 
