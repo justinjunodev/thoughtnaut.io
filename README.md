@@ -8,9 +8,9 @@
 1. Navigate to the projects root directory and install its dependencies: `npm i`
 1. You’re ready to code! Start your development environment `npm run dev`.
 
-#### Note: This project is still in beta and a sample dataset has not been created. 
-To render the `session` page locally, you can create an array of prompt objects and use them instead of the data from the `getServerSideProps`. Example: `const prompts = Array.from({ length: 5 } , () => ({id: 0, prompt: 'How do you feel today?'})).
-`
+#### No `Xata API Key`? No problem.
+
+For contributors without access to the Xata backend, a sample set of writing prompts will be rendered when running locally.
 
 ---
 

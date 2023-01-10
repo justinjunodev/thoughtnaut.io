@@ -82,25 +82,35 @@ const Session = ({ prompts }: SessionProps) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  // Get all prompts from Xata and split into daily/ special groups.
-  const xata = new XataClient({ apiKey: process.env.XATA_API_KEY })
-  const prompts = await xata.db.prompts.getAll()
-  const daily = prompts?.filter((prompt) => prompt.is_daily)
-  const special = prompts?.filter((prompt) => !prompt.is_daily)
+  if (!process.env.XATA_API_KEY) {
+    // If a Xata API key isn't present, return sample prompts.
+    const samplePrompts = Array.from({ length: 5 }, (_, i) => ({
+      id: i + 1,
+      prompt: `This is sample writing prompt #${i + 1}?`,
+    }))
 
-  // Randomly select two unique prompts from the special group.
-  const a = Math.floor(Math.random() * special?.length)
-  let b = Math.floor(Math.random() * special?.length)
-  b == a ? (b = Math.floor(Math.random() * special?.length)) : b
+    return { props: { prompts: samplePrompts } }
+  } else {
+    // Get all prompts from Xata and split into daily/ special groups.
+    const xata = new XataClient({ apiKey: process.env.XATA_API_KEY })
+    const prompts = await xata.db.prompts.getAll()
+    const daily = prompts?.filter((prompt) => prompt.is_daily)
+    const special = prompts?.filter((prompt) => !prompt.is_daily)
 
-  // If error, return 404.
-  if (!prompts) {
-    return {
-      notFound: true,
+    // Randomly select two unique prompts from the special group.
+    const a = Math.floor(Math.random() * special?.length)
+    let b = Math.floor(Math.random() * special?.length)
+    b == a ? (b = Math.floor(Math.random() * special?.length)) : b
+
+    // If error, return 404.
+    if (!prompts) {
+      return {
+        notFound: true,
+      }
     }
-  }
 
-  return { props: { prompts: [...daily, special[a], special[b]] } }
+    return { props: { prompts: [...daily, special[a], special[b]] } }
+  }
 }
 
 export default Session
