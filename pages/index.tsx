@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { trackGoal } from 'fathom-client'
@@ -23,6 +23,11 @@ const Home = () => {
     // Route user to session page.
     router.push('/session')
   }
+
+  useEffect(() => {
+    // Prefetch the session page to improve performance.
+    router.prefetch('/session')
+  }, [router])
 
   return (
     <Layout>
