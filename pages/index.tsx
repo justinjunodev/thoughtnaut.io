@@ -20,10 +20,8 @@ const Home = () => {
       trackGoal(process.env.NEXT_PUBLIC_FATHOM_SESSION_STARTED as string, 0)
     }
 
-    // Add timeout to allow user to see the loading state.
-    setTimeout(() => {
-      router.push('/session')
-    }, 75)
+    // Route user to session page.
+    router.push('/session')
   }
 
   return (
