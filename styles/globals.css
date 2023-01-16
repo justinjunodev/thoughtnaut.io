@@ -125,6 +125,15 @@ body {
   margin-bottom: var(--gap-xl);
 }
 
+.main__copy-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-base);
+  padding-left: 0;
+}
+
 .main__copy-sub {
   font-size: var(--fs-sm);
   line-height: var(--lh-sm);
